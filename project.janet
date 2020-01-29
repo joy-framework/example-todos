@@ -1,7 +1,7 @@
 (declare-project
   :name "todos"
   :description ""
-  :dependencies [{:repo "https://github.com/joy-framework/joy" :tag "f3ecb7d2bd7d7d7f0fee7c69808e5b0e7d78f9ee"}
+  :dependencies [{:repo "https://github.com/joy-framework/joy" :tag "283766b785e8ed8d59803a3c8be56d61bd693e8e"}
                  {:repo "https://github.com/joy-framework/tester" :tag "c14aff3591cb0aed74cba9b54d853cf0bf539ecb"}]
   :author ""
   :license ""

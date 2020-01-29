@@ -69,12 +69,12 @@
 (defn form [request route]
   (let [todo (todo request)]
     (form-for [request route todo]
-      (label :name)
+      (label :name "Name")
       (text-field todo :name)
       (let [name-error (get-in request [:errors :name])]
         [:div (or name-error "")])
 
-      (label :completed-at)
+      (label :completed-at "Completed At")
       (text-field todo :completed-at)
       (let [completed-at-error (get-in request [:errors :completed-at])]
         [:div (or completed-at-error "")])

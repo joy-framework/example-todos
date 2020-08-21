@@ -5,20 +5,19 @@ This is an example app which uses the [joy web framework](https://joyframework.c
 Check it out by following the steps below
 
 1. Make sure [janet is installed](https://janet-lang.org/docs/index.html)
-2. Run the following commands in your terminal to begin
+2. Then make sure joy is installed `jpm install joy`
+3. Run the following commands in your terminal to begin
 
 ```sh
 git clone https://github.com/joy-framework/example-todos
 cd example-todos
+mv .env.example .env
 jpm deps
-echo 'ENCRYPTION_KEY=hAkrDfoDMBh8GhBdvApw6wrlneWlhFu5Rfq4ea0Qsaw=' > .env
-echo 'JOY_ENV=development' >> .env
-echo 'DB_NAME=dev.sqlite3' >> .env
 joy create db
 joy migrate
 joy server
 ```
 
-That last one should start a server on `http://localhost:8000` and you can click around and create, view, update and delete todos!
+That last one should start a server on `http://localhost:9001` and you can click around and create, view, update and delete todos!
 
 Not super useful, but it shows off how a simple joy app works

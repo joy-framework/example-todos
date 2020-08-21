@@ -1,4 +1,8 @@
-(import joy)
-(import ./src/app :prefix "")
+(use joy)
+(use ./src/app)
 
-(joy/server app 8000)
+
+(defn main [&]
+  (db/connect (env :database-url))
+  (server app 9001)
+  (db/disconnect))

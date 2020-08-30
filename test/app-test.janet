@@ -2,10 +2,9 @@
 (import tester :prefix "" :exit true)
 (import "src/app" :prefix "")
 
+(db/connect (env :database-url))
+
 (deftest
   (test "test the app"
-    (is (= 200
-           (do
-             (db/connect (env :database-url))
-             (let [response (app {:uri "/" :method :get})]
-               (get response :status)))))))
+    (let [{:status status} (app {:uri "/" :method :get})]
+      (is (= status 200)))))

@@ -1,6 +1,6 @@
 (use joy)
 (import tester :prefix "" :exit true)
-(import "src/app" :prefix "")
+(import "app" :prefix "")
 
 (db/connect (env :database-url))
 

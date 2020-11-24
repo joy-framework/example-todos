@@ -1,8 +1,7 @@
 (use joy)
-(use ./src/app)
-
+(use ./app)
 
 (defn main [&]
   (db/connect (env :database-url))
-  (server app 9001)
+  (server app (env :port))
   (db/disconnect))
